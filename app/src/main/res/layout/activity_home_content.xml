@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dhritiman.yugyugjiyo.HomeActivity">
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="65dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="16dp"
+        android:id="@+id/spinner"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_action_menu"
+        android:layout_alignBottom="@+id/spinner"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/imageView3" />
+
+
+    <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/spinner">
+    <include layout="@layout/hospitalization_heal_deal_section">
+
+    </include>
+    </RelativeLayout>-->
+
+    <!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.dhritiman.yugyugjiyo.HomeActivity">
+    <include layout="@layout/image_slider"
+       android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="350dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+     </include>
+    </RelativeLayout>-->
+    <!---Image Slider-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.dhritiman.yugyugjiyo.HomeActivity"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <ViewFlipper
+            android:id="@+id/flipper1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:flipInterval="3000"
+            android:inAnimation="@anim/slide_in_right"
+            android:outAnimation="@anim/slide_out_left"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:src="@drawable/france"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:contentDescription="image2"
+                android:layout_gravity="center_horizontal" />
+
+            <ImageView
+                android:src="@drawable/france"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:contentDescription="image2"
+                android:layout_gravity="center_horizontal"/>
+
+            <ImageView
+                android:src="@drawable/france"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:contentDescription="image1"
+                android:layout_gravity="center_horizontal" />
+        </ViewFlipper>
+        <Button
+            android:text="Add Hospita\n post package request\n compare and book"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:id="@+id/button4"
+            android:drawableLeft="@drawable/img2"
+            android:drawableTop="@drawable/img3"
+            android:drawableRight="@drawable/img2"
+            android:layout_below="@+id/button6"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="10dp"/>
+
+        <!--End of Image Slider
+          android:layout_marginBottom="13dp"-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/button4"/>
+
+        <Button
+            android:text="Hospital"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:id="@+id/button6"
+            android:drawableTop="@drawable/img2"
+            android:textSize="10dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginEnd="28dp"
+            android:layout_below="@+id/flipper1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:text="Book Healdeal"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:id="@+id/button"
+            android:drawableTop="@drawable/img3"
+            android:textSize="10dp"
+            android:layout_below="@+id/flipper1"
+            android:layout_toLeftOf="@+id/button6"
+            android:layout_toStartOf="@+id/button6" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/logo"
+        android:id="@+id/imageView" />
+</RelativeLayout>
+
+
+
+
