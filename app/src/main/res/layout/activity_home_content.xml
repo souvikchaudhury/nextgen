@@ -6,14 +6,20 @@
     android:layout_height="match_parent"
     tools:context="com.example.dhritiman.yugyugjiyo.HomeActivity">
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/layout1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">-->
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_home"
-            android:id="@+id/imageView" />
+            android:id="@+id/imageView"
+            android:layout_toStartOf="@+id/button"
+            android:layout_toLeftOf="@+id/button" />
 
         <TextView
             android:text="Kolkata"
@@ -27,30 +33,119 @@
             android:layout_marginBottom="8dp"
             android:id="@+id/textView"
             android:textColor="#FF0000"/>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_action_menu"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="7dp"
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="30dp"
             android:id="@+id/imageButton"
-            android:background="#FFFFFF"/>
-        <EditText
+            android:background="@drawable/ic_action_menu"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    <ViewFlipper
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:flipInterval="3000"
+        android:inAnimation="@anim/slide_in_right"
+        android:outAnimation="@anim/slide_out_left"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/flipper1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:src="@drawable/france"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:hint="Search"
-            android:ems="10"
-            android:layout_below="@id/imageButton"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/editText"
-            android:drawableLeft="@drawable/ic_action_search"/>
-    </RelativeLayout>
+            android:contentDescription="image1"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"/>
 
+        <ImageView
+            android:src="@drawable/france"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="image2"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:scaleType="fitEnd"/>
+    </ViewFlipper>
+
+    <Button
+        android:text="Book Healdeal"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:id="@+id/button"
+        android:drawableTop="@drawable/img3"
+        android:textSize="10dp"
+        android:layout_below="@+id/flipper1"
+        android:layout_toLeftOf="@+id/button6"
+        android:layout_toStartOf="@+id/button6"
+        android:layout_marginRight="17dp"
+        android:layout_marginEnd="17dp"
+        android:gravity="center_horizontal"/>
+
+    <Button
+        android:text="Hospital"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:id="@+id/button6"
+        android:drawableTop="@drawable/img2"
+        android:textSize="10dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginEnd="19dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/flipper1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <Button
+        android:text="Add Hospita\n post package request\n compare and book"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:id="@+id/button4"
+        android:drawableLeft="@drawable/img2"
+        android:drawableTop="@drawable/img3"
+        android:drawableRight="@drawable/img2"
+        android:layout_below="@+id/button6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="10dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/button4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Search"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:drawableLeft="@drawable/ic_action_search"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:paddingLeft="10dp"
+        android:text="Search by Treatments"
+        android:textSize="10dp"
+        android:textColor="#000000"
+        android:layout_below="@id/button4"
+        android:layout_above="@id/recyclerview"/>
 
 </RelativeLayout>
+<!--</RelativeLayout>-->
+
+
 
 

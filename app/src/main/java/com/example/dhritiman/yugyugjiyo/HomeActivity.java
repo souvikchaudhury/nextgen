@@ -39,9 +39,9 @@ public class HomeActivity extends AppCompatActivity {
             /** Start Flipping */
             flipper.startFlipping();
         }
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+      //  Spinner spinner = (Spinner) findViewById(R.id.spinner);
         // Spinner Drop down elements
-        List<String> categories = new ArrayList<String>();
+       /* List<String> categories = new ArrayList<String>();
         categories.add("Kolkata");
         categories.add("Delhi");
         categories.add("Mumbai");
@@ -53,7 +53,7 @@ public class HomeActivity extends AppCompatActivity {
         dataAdapter.setDropDownViewResource(R.layout.custom_spinner);
 
         // attaching data adapter to spinner
-        spinner.setAdapter(dataAdapter);
+        spinner.setAdapter(dataAdapter);*/
         //ib.setOnClickListener(this);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         adapter = new singleitem_recycler_adapter(this, feedsList);
